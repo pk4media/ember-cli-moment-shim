@@ -31,6 +31,10 @@
     return ComparableMoment.create(moment.utc.apply(this, arguments));
   };
 
+  comparableMoment.unix = function() {
+    return ComparableMoment.create(moment.unix.apply(this, arguments));
+  };
+
   ComparableMoment.reopen({
     clone: function() {
       return comparableMoment(this);
